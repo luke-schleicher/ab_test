@@ -7,6 +7,10 @@ class Employee < ApplicationRecord
 
   before_save :calculate_score
 
+  def name
+    first_name + " " + last_name
+  end
+
   private
 
     def calculate_score
